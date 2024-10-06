@@ -152,3 +152,17 @@
     display: flex;
     justify-content: space-between;
 }
+
+
+
+@media (max-width:500px) {
+    .main {
+        position: relative;
+        height: 100%;
+        border-radius: 5px;
+        padding: 5px;
+        width: 100%;
+        background-color: aliceblue;
+        overflow: hidden;
+    }
+}
