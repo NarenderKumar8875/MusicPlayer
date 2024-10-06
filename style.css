@@ -1,0 +1,154 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(161, 155, 155);
+}
+
+.main {
+    position: relative;
+    height: 500px;
+    border-radius: 5px;
+    padding: 5px;
+    width: 16rem;
+    background-color: aliceblue;
+    overflow: hidden;
+}
+
+.outer-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    height: 200px;
+    border-radius: 100%;
+    width: 200px;
+    /* background-color: tomato; */
+    background:url(https://img.freepik.com/premium-vector/logo-music-equalizer-dj-spectrum-colorful_174590-2.jpg?w=360);
+
+    background-size: contain;
+
+}
+
+.seek-bar {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.seek-bar input {
+    width: 100%;
+}
+
+
+.buttons {
+    margin-top: 2rem;
+    padding: 20px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+.buttons i {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.main .list {
+    position: absolute;
+    top: 0;
+    width: 12rem;
+    left: -195px;
+    height: 100%;
+    background-color: rgb(219, 196, 192);
+    transition: 250ms;
+    padding: 5px 10px;
+}
+
+.ham {
+    width: 3rem;
+    height: 2.5rem;
+}
+
+.ham i {
+    font-size: 25px;
+    font-weight: 550;
+    cursor: pointer;
+}
+
+.list .cross {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.list .cross i {
+    font-size: 27px;
+    cursor: pointer;
+}
+
+.play {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.currunt-music-name p {
+    display: inline-block;
+    white-space: nowrap;
+    animation: move 10s linear infinite;
+    margin-top: 5px;
+}
+
+@keyframes move {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.list {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    overflow: auto;
+}
+.list .divv{
+    overflow:hidden;
+    background-color: tomato;
+    padding: 2px;
+    border-radius: 5px;
+    min-height: 2.5rem;
+
+}
+.list p {
+    overflow: hidden;
+    width: 100%;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.timer {
+    display: flex;
+    justify-content: space-between;
+}
